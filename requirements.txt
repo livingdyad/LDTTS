@@ -1,0 +1,6 @@
+numpy
+sounddevice
+deepgram-sdk
+pyttsx3
+pydub
+g2p-en

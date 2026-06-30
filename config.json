@@ -1,0 +1,21 @@
+{
+  "deepgram_api_key": "REPLACE WITH YOUR ACTUAL KEY",
+  "deepgram_model": "flux-general-en",
+  "deepgram_language": "en-US",
+  "deepgram_encoding": "linear16",
+  "deepgram_punctuate": true,
+  "deepgram_interim_results": false,
+  "sample_rate": 16000,
+  "channels": 1,
+  "input_device": "michael phone",
+  "output_device": "CABLE-D Input (VB-Audio Cable D)",
+  "device_index": null,
+  "frame_duration": 0.005,
+  "debug": false,
+  "audio_overlap_buffer": 0.25,
+  "tts_engine": "pyttsx3",
+  "pyttsx3_append_period": true,
+  "audio_trim_silence_thresh": -60,
+  "audio_trim_silence_len": 25,
+  "audio_trim_padding": 20
+}

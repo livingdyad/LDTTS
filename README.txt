@@ -1,6 +1,6 @@
-READ THIS WHOLE THING (unless you don't care, and in that case, just read the first 2 sentences
-starting at line 5, lines 11-16, the security disclaimer at lines 31-32, and line 40. also check
-requirements.txt. or just actually read the whole thing. douche.)
+LDTTS is a Python program that captures microphone audio, transcribes it in real time (usually <1s
+latency), and repeats it with pyttsx3 routed to a virtual audio cable. it's great for streaming,
+roleplay, or just dicking around with a robotic voice.
 
 make sure you have deepgram_api_key set in config.json or this won't work. as of writing this
 (6/30/2026) Deepgram gives you $200 of free credit without needing to sign up for some free

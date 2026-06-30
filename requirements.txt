@@ -4,3 +4,4 @@ deepgram-sdk
 pyttsx3
 pydub
 g2p-en
+# Node.js is also required for the bundled klattsch wrapper

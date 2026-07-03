@@ -50,6 +50,7 @@ DEFAULTS = {
     "audio_overlap_buffer": 0.1,
     "output_device": None,
     "tts_engine": "samtts",
+    "tts_rate": 150,
     "pyttsx3_append_period": False,
     "audio_trim_silence_thresh": -45,
     "audio_trim_silence_len": 25,
@@ -123,6 +124,7 @@ def load_config(path: str) -> Dict[str, Any]:
     cfg["audio_trim_silence_thresh"] = float(cfg.get("audio_trim_silence_thresh", DEFAULTS["audio_trim_silence_thresh"]))
     cfg["audio_trim_silence_len"] = int(cfg.get("audio_trim_silence_len", DEFAULTS["audio_trim_silence_len"]))
     cfg["audio_trim_padding"] = int(cfg.get("audio_trim_padding", DEFAULTS["audio_trim_padding"]))
+    cfg["tts_rate"] = max(1, int(cfg.get("tts_rate", DEFAULTS["tts_rate"])))
     cfg["pyttsx3_append_period"] = bool(cfg.get("pyttsx3_append_period", DEFAULTS["pyttsx3_append_period"]))
     return cfg
 
@@ -511,7 +513,8 @@ def _generate_and_queue_tts(text: str, cfg: Optional[Dict[str, Any]] = None) -> 
                 raise RuntimeError("pydub is required for the default TTS engine")
 
             engine = pyttsx3.init()
-            engine.setProperty('rate', 150)
+            tts_rate = int(cfg.get("tts_rate", DEFAULTS.get("tts_rate", 150)))
+            engine.setProperty('rate', max(1, tts_rate))
             engine.save_to_file(text, temp_path)
             engine.runAndWait()
 

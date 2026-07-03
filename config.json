@@ -14,6 +14,7 @@
   "debug": false,
   "audio_overlap_buffer": 0.25,
   "tts_engine": "pyttsx3",
+  "tts_rate": 150,
   "pyttsx3_append_period": true,
   "audio_trim_silence_thresh": -60,
   "audio_trim_silence_len": 25,
